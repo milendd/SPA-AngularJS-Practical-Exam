@@ -1,8 +1,8 @@
-﻿body{
+﻿body {
     margin: 0;
     padding: 0;
     font-family: Arial;
-    background-color: #E2F0D9;
+    background-color: #E0F0D0;
 }
 
 header, footer {
@@ -14,35 +14,44 @@ header, footer, .advertisement {
     border: 2px solid #668844;
 }
 
-main {
-    background-color: #E2F0D9;
-    height: 500px;
+footer {
+    padding: 10px;
 }
 
-h3 {
-    display: inline-block;
+main {
+    background-color: #E0F0D0;
 }
 
 .advertisement {
     width: 30%;
     margin: 20px auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-.title > strong {
-    float: right;
+.title > h3, .title > strong, .imageView {
+    text-align: center;
+}
+
+strong {
+    display: block;
 }
 
 .content {
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
-.imageView, .text, .name {
+.imageView, .text, .name, .email, .tel {
     border-radius: 5px;
     border: 2px dotted black;
     padding: 15px;
+    background-color: #C5E0B0;
 }
 
 .imageView{
-    display: inline-block;
+    margin: 10px auto;
+}
+
+img {
+    width: 60%;
+    height: 60%;
 }
