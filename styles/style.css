@@ -24,10 +24,23 @@ nav {
 }
 
 .linkButton {
-    border: 2px solid #6CA844;
+    border: 2px solid #668844;
     margin: 10px 20px;
     padding: 10px;
     border-radius: 10px;
+    background-color: #70AA44;
+}
+
+.linkButton > a{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    text-shadow: 1px 2px #606060;
+}
+
+a {
+    text-decoration: none;
 }
 
 footer {
