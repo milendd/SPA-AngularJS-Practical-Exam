@@ -53,6 +53,12 @@ header, footer, nav, .advertisement{
     background-color: #DAAA00;
 }
 
+.rightNavigation ul li a{
+    display: block;
+    color: black;
+    font-size: 1.1em;
+}
+
 .linkButton {
     border: 2px solid #668844;
     margin: 10px 20px;
@@ -113,4 +119,10 @@ footer {
 img {
     width: 60%;
     height: 60%;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #668844;
 }
