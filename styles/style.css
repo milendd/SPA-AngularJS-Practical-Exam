@@ -17,10 +17,17 @@ header, footer, nav, .advertisement{
     border: 2px solid #668844;
 }
 
-nav {
-    float: left;
+.leftNavigation, .rightNavigation{
     margin: 20px;
     padding: 15px;
+}
+
+.leftNavigation {
+    float: left;
+}
+
+.rightNavigation {
+    float: right;
 }
 
 .linkButton {
@@ -37,6 +44,10 @@ nav {
     font-size: 20px;
     display: block;
     text-shadow: 1px 2px #606060;
+}
+
+.linkButton:hover {
+    background-color: #DAAA00;
 }
 
 a {
