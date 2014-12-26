@@ -30,6 +30,29 @@ header, footer, nav, .advertisement{
     float: right;
 }
 
+.rightNavigation div{
+    margin: 10px;
+}
+
+.rightNavigation ul {
+    padding: 0;
+}
+
+.rightNavigation ul li {
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+.rightNavigation ul li:hover {
+    background-color: #F7C40C;
+}
+
+.rightNavigation ul li.selected{
+    border: 1px solid #668844;
+    background-color: #DAAA00;
+}
+
 .linkButton {
     border: 2px solid #668844;
     margin: 10px 20px;
