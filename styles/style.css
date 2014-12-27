@@ -12,7 +12,7 @@ header, footer, .linkButton {
     text-align: center;
 }
 
-header, footer, nav, .advertisement{
+header, footer, nav, .advertisement, .loginForm{
     background-color: #AACC88;
     border: 2px solid #668844;
 }
@@ -61,10 +61,11 @@ header, footer, nav, .advertisement{
 
 .linkButton {
     border: 2px solid #668844;
-    margin: 10px 20px;
+    margin: 10px auto;
     padding: 10px;
     border-radius: 10px;
     background-color: #70AA44;
+    width: 160px;
 }
 
 .linkButton > a{
@@ -87,13 +88,30 @@ footer {
     padding: 10px;
 }
 
-.advertisement{
-    width: 30%;
+main {
+    min-height: 630px; /* remove this*/
+}
+
+.advertisement, .loginForm {
     margin: 20px auto;
     padding: 0 20px;
 }
 
-.title > h3, .title > strong, .imageView {
+.advertisement {
+    width: 30%;
+}
+
+.loginForm {
+    width: 20%;
+    border-radius: 10px;
+}
+
+.loginForm div{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.title > h3, .title > strong, .imageView, h2 {
     text-align: center;
 }
 
@@ -125,4 +143,12 @@ hr {
     border: 0;
     height: 2px;
     background: #668844;
+}
+
+input {
+    font-size: 1.2em;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: block;
+    width: 95%;
 }

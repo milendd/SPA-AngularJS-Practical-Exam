@@ -3,6 +3,9 @@
 <head>
     <title>Ads</title>
     <link href="styles/style.css" rel="stylesheet" />
+    <script src="scripts/libs/jquery-2.1.1.min.js"></script>
+    <script src="scripts/libs/jquery.noty.packaged.min.js"></script>
+    <script src="scripts/libs/angular.js"></script>
 </head>
 <body>
     <header>
@@ -39,7 +42,7 @@
         </div>
     </nav>
     <main>
-        <div class="advertisement">
+        <div class="advertisement" style="display:none;">
             <div class="title">
                 <h3>IPhone 4S for sale</h3>
                 <strong>3-Jan-2015</strong>
@@ -65,7 +68,7 @@
                </div>
             </div>
         </div>
-        <div class="advertisement">
+        <div class="advertisement" style="display:none;">
             <div class="title">
                 <h3>Job as Housekeeper</h3>
                 <strong>28-Dec-2014</strong>
@@ -89,6 +92,21 @@
                    <strong>Tel: </strong> 
                    <div class="tel">+359 888 777 666</div>
                </div>
+            </div>
+        </div>
+        <div class="loginForm">
+            <h2>Login</h2>
+            <hr />
+            <span>Username:</span>
+            <input type="text" name="loginUsername" required="required"/>
+            <span>Password:</span>
+            <input type="password" name="loginPassword" required="required"/>
+
+            <div class="linkButton">
+                <a href="#/user/login">Login</a>
+            </div>
+            <div>
+                <a href="#/register">Register here</a>
             </div>
         </div>
     </main>
