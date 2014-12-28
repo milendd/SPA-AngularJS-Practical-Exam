@@ -26,34 +26,39 @@ header, footer, nav, .advertisement, .loginForm, .registerForm{
     float: left;
 }
 
+.userNavigation > h3  {
+    margin: 0;
+    text-align: center;
+}
+
 .rightNavigation {
     float: right;
 }
 
-.rightNavigation div{
+nav div{
     margin: 10px;
 }
 
-.rightNavigation ul {
+nav ul{
     padding: 0;
 }
 
-.rightNavigation ul li {
+nav ul li{
     list-style-type: none;
     margin-top: 5px;
     padding: 2px;
 }
 
-.rightNavigation ul li:hover {
+nav ul li:hover{
     background-color: #F7C40C;
 }
 
-.rightNavigation ul li.selected{
+nav ul li.selected{
     border: 1px solid #668844;
     background-color: #DAAA00;
 }
 
-.rightNavigation ul li a{
+nav ul li a{
     display: block;
     color: black;
     font-size: 1.1em;

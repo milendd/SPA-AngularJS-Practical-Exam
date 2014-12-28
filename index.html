@@ -12,12 +12,24 @@
         <h2>Ads - Home</h2>
     </header>
     <nav class="leftNavigation">
-        To publish a new ad, please login.
-        <div class="linkButton">
-            <a href="#/login">Login</a>
+        <div class="guestNavigation" style="display:none;">
+            To publish a new ad, please login.
+            <div class="linkButton">
+                <a href="#/login">Login</a>
+            </div>
+            <div class="linkButton">
+                <a href="#/register">Register</a>
+            </div>
         </div>
-        <div class="linkButton">
-            <a href="#/register">Register</a>
+        <div class="userNavigation">
+            <h3>Navigation</h3>
+            <hr />
+            <ul>
+                <li class="selected"><a href="#">Home</a></li>
+                <li><a href="#/user/ads">My Ads</a></li>
+                <li><a href="#/user/ads">Publish New Ad</a></li>
+                <li><a href="#/user/profile">Edit Profile</a></li>
+            </ul>
         </div>
     </nav>
     <nav class="rightNavigation">
