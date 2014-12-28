@@ -94,7 +94,7 @@
                </div>
             </div>
         </div>
-        <div class="loginForm">
+        <div class="loginForm" style="display:none;">
             <h2>Login</h2>
             <hr />
             <span>Username:</span>
@@ -107,6 +107,34 @@
             </div>
             <div>
                 <a href="#/register">Register here</a>
+            </div>
+        </div>
+        <div class="registerForm">
+            <h2>User registration</h2>
+            <hr />
+            <span>Username:</span>
+            <input type="text" name="registerUsername" required="required"/>
+            <span>Password:</span>
+            <input type="password" name="registerPassword" required="required"/>
+            <span>Confirm password:</span>
+            <input type="password" name="registerPasswordAgain" required="required"/>
+            <span>Name:</span>
+            <input type="text" name="registerName" required="required"/>
+            <span>Email:</span>
+            <input type="email" name="registerEmail" required="required"/>
+            <span>Phone:</span>
+            <input type="tel" name="registerPhone" required="required"/>
+            <span>Town:</span>
+            <select>
+                <option>Plovdiv</option>
+            </select>
+            <!-- TODO: add select for towns -->
+
+            <div class="linkButton">
+                <a href="#/user/register">Register</a>
+            </div>
+            <div>
+                <a href="#/login">Login here</a>
             </div>
         </div>
     </main>

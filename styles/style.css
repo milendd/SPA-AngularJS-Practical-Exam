@@ -12,7 +12,7 @@ header, footer, .linkButton {
     text-align: center;
 }
 
-header, footer, nav, .advertisement, .loginForm{
+header, footer, nav, .advertisement, .loginForm, .registerForm{
     background-color: #AACC88;
     border: 2px solid #668844;
 }
@@ -92,7 +92,7 @@ main {
     min-height: 630px; /* remove this*/
 }
 
-.advertisement, .loginForm {
+.advertisement, .loginForm, .registerForm {
     margin: 20px auto;
     padding: 0 20px;
 }
@@ -101,12 +101,12 @@ main {
     width: 30%;
 }
 
-.loginForm {
+.loginForm, .registerForm {
     width: 20%;
     border-radius: 10px;
 }
 
-.loginForm div{
+.loginForm div, .registerForm div{
     text-align: center;
     margin-bottom: 5px;
 }
@@ -145,7 +145,7 @@ hr {
     background: #668844;
 }
 
-input {
+input, select {
     font-size: 1.2em;
     padding: 5px;
     margin-bottom: 5px;
