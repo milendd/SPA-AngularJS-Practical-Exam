@@ -7,8 +7,11 @@
     <script src="scripts/libs/jquery.noty.packaged.min.js"></script>
     <script src="scripts/libs/angular.js"></script>
 </head>
-<body>
+<body data-ng-app="myApp">
     <header>
+        <h1 data-ng-controller="TownController">
+		    {{name}}
+	    </h1>
         <h2>Ads - Home</h2>
         <div id="userSettings">
             <span>maria</span>
@@ -187,5 +190,8 @@
     <footer>
         <span>&copy; 2014 by Software University Foundation, No Rights Reserved</span>
     </footer>
+    
+    <script src="scripts/app/app.js"></script>
+    <script src="scripts/app/controllers/TownController.js"></script>
 </body>
 </html>
