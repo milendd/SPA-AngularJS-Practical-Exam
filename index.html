@@ -26,7 +26,7 @@
                 <a href="#/register">Register</a>
             </div>
         </div>
-        <div class="userNavigation">
+        <div class="userNavigation" style="display:block;">
             <h3>Navigation</h3>
             <hr />
             <ul>
@@ -126,7 +126,7 @@
                 <a href="#/register">Register here</a>
             </div>
         </div>
-        <div class="registerForm">
+        <div class="registerForm" style="display:none;">
             <h2>User registration</h2>
             <hr />
             <span>Username:</span>
@@ -152,6 +152,35 @@
             </div>
             <div>
                 <a href="#/login">Login here</a>
+            </div>
+        </div>
+        <div class="publishNewAd">
+            <h2>Publish New Ad</h2>
+            <hr />
+            <!-- <div class="imageContainer"><img src="images/1.jpg" /></div> -->
+            <span>Title:</span>
+            <input type="text" name="publishTitle" required="required"/><br />
+            <span>Text:</span>
+            <input type="text" name="publishText" required="required"/><br />
+            <span>Image:</span>
+            <input type="text" name="publishImageSrc"/><br />
+            <!-- <input type="file" name="publishImage" value="Browse..." /> -->
+            <span>Category:</span>
+            <select>
+                <option>Cars</option>
+            </select>
+            <br />
+            <span>Town:</span>
+            <select>
+                <option>Plovdiv</option>
+            </select>
+            <br />
+
+            <div class="linkButton">
+                <a href="#/user/ads">Publish</a>
+            </div>
+            <div class="linkButton">
+                <a href="#">Cancel</a>
             </div>
         </div>
     </main>
