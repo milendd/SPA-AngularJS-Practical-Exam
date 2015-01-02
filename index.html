@@ -7,17 +7,16 @@
     <script src="scripts/libs/jquery.noty.packaged.min.js"></script>
     <script src="scripts/libs/angular.js"></script>
 </head>
-<body data-ng-app="myApp">
+<body data-ng-app="myApp" data-ng-controller="AdsController">
     <header>
-        <h2 data-ng-controller="AdsController">{{title}}</h2>
-        <div id="userSettings" style="display:none;">
+        <div id="userSettings" style="display: none;">
             <span>maria</span>
             <a href="#">Logout</a>
         </div>
         <div class="clearfix"></div>
     </header>
     <nav class="leftNavigation">
-        <div class="guestNavigation" style="display:block;">
+        <div class="guestNavigation" style="display: block;">
             To publish a new ad, please login.
             <div class="linkButton">
                 <a href="#/login">Login</a>
@@ -26,7 +25,7 @@
                 <a href="#/register">Register</a>
             </div>
         </div>
-        <div class="userNavigation" style="display:none;">
+        <div class="userNavigation" style="display: none;">
             <h3>Navigation</h3>
             <hr />
             <ul>
@@ -42,9 +41,7 @@
             <h3>Categories</h3>
             <ul>
                 <li class="selected"><a href="#">All</a></li>
-                <li><a href="#/ads?cetegoryid=1">Cars</a></li>
-                <li><a href="#/ads?cetegoryid=2">Properties</a></li>
-                <li><a href="#/ads?cetegoryid=3">Jobs</a></li>
+                <li data-ng-repeat="category in categories"><a href="#">{{category.name}}</a></li>
             </ul>
         </div>
         <hr />
@@ -52,9 +49,7 @@
             <h3>Towns</h3>
             <ul>
                 <li class="selected"><a href="#">All</a></li>
-                <li><a href="#/ads?townid=1">Sofia</a></li>
-                <li><a href="#/ads?townid=2">Varna</a></li>
-                <li><a href="#/ads?townid=3">Bourgas</a></li>
+                <li data-ng-repeat="town in towns"><a href="#">{{town.name}}</a></li>
             </ul>
         </div>
     </nav>
@@ -187,8 +182,11 @@
     <footer>
         <span>&copy; 2014 by Software University Foundation, No Rights Reserved</span>
     </footer>
-    
+
+    <script src="scripts/libs/angular-resource.min.js"></script>
     <script src="scripts/app/app.js"></script>
     <script src="scripts/app/controllers/AdsController.js"></script>
+    <script src="scripts/app/services/CategoriesResource.js"></script>
+    <script src="scripts/app/services/TownsResource.js"></script>
 </body>
 </html>
