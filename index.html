@@ -9,6 +9,7 @@
 </head>
 <body data-ng-app="myApp" data-ng-controller="AdsController">
     <header>
+		<h2>Ads - Home</h2>
         <div id="userSettings" style="display: none;">
             <span>maria</span>
             <a href="#">Logout</a>
@@ -103,6 +104,33 @@
                 <div>
                    <strong>Tel: </strong> 
                    <div class="tel">+359 888 777 666</div>
+               </div>
+            </div>
+        </div>
+        <div class="advertisement" ng-repeat="ad in ads">
+            <div class="title">
+                <h3>{{ad.title}}</h3>
+                <strong>{{ad.date | date:'d-MMM-yyyy'}}</strong>
+            </div>
+            <div class="content">
+               <div class="imageView">
+                   <img data-ng-src="{{ad.imageDataUrl}}"/>
+                   <img data-ng-if="!ad.imageDataUrl" data-ng-src="images/noImage.png"/>
+               </div>
+               <div class="text">
+                    {{ad.text}}
+               </div>
+               <div>
+                   <strong>Name: </strong> 
+                   <div class="name">{{ad.ownerName}}</div>
+               </div>
+               <div>
+                   <strong>Email: </strong> 
+                   <div class="email"><a href="mailto:{{ad.ownerEmail}}">{{ad.ownerEmail}}</a></div>
+               </div>
+                <div>
+                   <strong>Tel: </strong> 
+                   <div class="tel">{{ad.ownerPhone}}</div>
                </div>
             </div>
         </div>
