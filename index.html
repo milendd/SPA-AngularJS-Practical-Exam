@@ -155,15 +155,15 @@
             </div>
         </div>
         <div class="pager">
-            <div class="pageButton"><a href="#/ads?pagesize={{requestParameters.pageSize}}&startpage=1">First</a></div>
-            <div class="pageButton"><a href="#/ads?pagesize={{requestParameters.pageSize}}&startpage=1">Previous</a></div>
+            <div class="pageButton"><a href="" data-ng-click="firstPage()">First</a></div>
+            <div class="pageButton"><a href="" data-ng-click="previousPage()">Previous</a></div>
 
-            <!-- TODO: create paging-->
-            <div class="pageButton"><a href="#/ads?pagesize={{requestParameters.pageSize}}&startpage=1">1</a></div>
-            <div class="pageButton"><a href="#/ads?pagesize={{requestParameters.pageSize}}&startpage=1">2</a></div>
+            <div class="pageButton" data-ng-repeat="i in pagesList track by $index">
+                <a href="" data-ng-click="setStartPage($index+1)">{{$index + 1}}</a>
+            </div>
 
-            <div class="pageButton"><a href="#/ads?pagesize={{requestParameters.pageSize}}&startpage=1">Next</a></div>
-            <div class="pageButton"><a href="#/ads?pagesize={{requestParameters.pageSize}}&startpage=1">Last</a></div>
+            <div class="pageButton"><a href="" data-ng-click="nextPage()">Next</a></div>
+            <div class="pageButton"><a href="" data-ng-click="lastPage()">Last</a></div>
         </div>
         <div class="clearfix"></div>
     </main>
