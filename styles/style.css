@@ -12,7 +12,7 @@ header, footer, .linkButton {
     text-align: center;
 }
 
-header, footer, nav, .advertisement, .loginForm, .registerForm, .publishNewAd{
+header, footer, nav, .advertisement, .loginForm, .registerForm, .publishNewAd, .pageButton{
     background-color: #AACC88;
     border: 2px solid #668844;
 }
@@ -96,6 +96,25 @@ nav ul li a{
 }
 
 .linkButton:hover {
+    background-color: #DAAA00;
+}
+
+.pager {
+    text-align: center;
+}
+
+.pager .pageButton {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.pager .pageButton > a {
+    color: black;
+    display: block;
+    margin: 5px 10px;
+}
+
+.pager .pageButton:hover {
     background-color: #DAAA00;
 }
 
