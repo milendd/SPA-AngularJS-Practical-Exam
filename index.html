@@ -7,7 +7,7 @@
     <script src="scripts/libs/jquery.noty.packaged.min.js"></script>
     <script src="scripts/libs/angular.js"></script>
 </head>
-<body data-ng-app="myApp" data-ng-controller="AdsController">
+<body data-ng-app="myApp">
     <header>
         <h2>Ads - Home</h2>
         <div id="userSettings" style="display: none;">
@@ -38,7 +38,7 @@
         </div>
     </nav>
     <nav class="rightNavigation">
-        <div class="categories">
+        <div class="categories" data-ng-controller="CategoryController">
             <h3>Categories</h3>
             <ul>
                 <li class="selected"><a href="#">All</a></li>
@@ -46,7 +46,7 @@
             </ul>
         </div>
         <hr />
-        <div class="towns">
+        <div class="towns" data-ng-controller="TownController">
             <h3>Towns</h3>
             <ul>
                 <li class="selected"><a href="#">All</a></li>
@@ -54,7 +54,7 @@
             </ul>
         </div>
     </nav>
-    <main>
+    <main data-ng-controller="AdsController">
         <div class="advertisement" ng-repeat="ad in ads">
             <div class="title">
                 <h3>{{ad.title}}</h3>
@@ -174,6 +174,8 @@
     <script src="scripts/libs/angular-resource.min.js"></script>
     <script src="scripts/app/app.js"></script>
     <script src="scripts/app/controllers/AdsController.js"></script>
+    <script src="scripts/app/controllers/CategoryController.js"></script>
+    <script src="scripts/app/controllers/TownController.js"></script>
     <script src="scripts/app/services/CategoriesResource.js"></script>
     <script src="scripts/app/services/TownsResource.js"></script>
     <script src="scripts/app/services/AdsResource.js"></script>
