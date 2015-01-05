@@ -45,4 +45,24 @@ app.controller('AdsController', ['$scope', 'pageSize', 'AdsResource',
             $scope.requestParameters.startPage = $scope.maxPage;
             $scope.getAds($scope.requestParameters);
         };
+
+        // filter by category and town:
+        $scope.getAllCategories = function () {
+            delete $scope.requestParameters.categoryId;
+            $scope.requestParameters.startPage = 1;
+            $scope.getAds($scope.requestParameters);
+        };
+        $scope.getAllTowns = function () {
+            delete $scope.requestParameters.townId;
+            $scope.requestParameters.startPage = 1;
+            $scope.getAds($scope.requestParameters);
+        };
+        $scope.getByCategoryId = function (id) {
+            $scope.requestParameters.categoryId = id;
+            $scope.getAds($scope.requestParameters);
+        };
+        $scope.getByTownId = function (id) {
+            $scope.requestParameters.townId = id;
+            $scope.getAds($scope.requestParameters);
+        };
     }]);
