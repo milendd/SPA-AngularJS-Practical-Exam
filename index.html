@@ -31,9 +31,9 @@
             <hr />
             <ul>
                 <li class="selected"><a href="#">Home</a></li>
-                <li><a href="#/user/ads">My Ads</a></li>
-                <li><a href="#/user/ads">Publish New Ad</a></li>
-                <li><a href="#/user/profile">Edit Profile</a></li>
+                <li style="display: none;"><a href="#/user/ads">My Ads</a></li>
+                <li style="display: none;"><a href="#/user/ads">Publish New Ad</a></li>
+                <li style="display: none;"><a href="#/user/profile">Edit Profile</a></li>
             </ul>
         </div>
     </nav>
@@ -97,7 +97,7 @@
                 <a href="#/register">Register here</a>
             </div>
         </div>
-        <div class="registerForm" style="display:none;">
+        <div class="registerForm" style="display:block;" data-ng-controller="TownController">
             <h2>User registration</h2>
             <hr />
             <span>Username:</span>
@@ -114,9 +114,8 @@
             <input type="tel" name="registerPhone" required="required"/>
             <span>Town:</span>
             <select>
-                <option>Plovdiv</option>
+                <option data-ng-repeat="town in towns">{{town.name}}</option>
             </select>
-            <!-- TODO: add select for towns -->
 
             <div class="linkButton">
                 <a href="#/user/register">Register</a>
