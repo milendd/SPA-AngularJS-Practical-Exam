@@ -56,48 +56,6 @@
     </nav>
     <main>
         <div ng-view></div>
-        <div class="loginForm" style="display:none;">
-            <h2>Login</h2>
-            <hr />
-            <span>Username:</span>
-            <input type="text" name="loginUsername" required="required"/>
-            <span>Password:</span>
-            <input type="password" name="loginPassword" required="required"/>
-
-            <div class="linkButton">
-                <a href="#/user/login">Login</a>
-            </div>
-            <div>
-                <a href="#/register">Register here</a>
-            </div>
-        </div>
-        <div class="registerForm" style="display:block;" data-ng-controller="TownController">
-            <h2>User registration</h2>
-            <hr />
-            <span>Username:</span>
-            <input type="text" name="registerUsername" required="required"/>
-            <span>Password:</span>
-            <input type="password" name="registerPassword" required="required"/>
-            <span>Confirm password:</span>
-            <input type="password" name="registerPasswordAgain" required="required"/>
-            <span>Name:</span>
-            <input type="text" name="registerName" required="required"/>
-            <span>Email:</span>
-            <input type="email" name="registerEmail" required="required"/>
-            <span>Phone:</span>
-            <input type="tel" name="registerPhone" required="required"/>
-            <span>Town:</span>
-            <select>
-                <option data-ng-repeat="town in towns">{{town.name}}</option>
-            </select>
-
-            <div class="linkButton">
-                <a href="#/user/register">Register</a>
-            </div>
-            <div>
-                <a href="#/login">Login here</a>
-            </div>
-        </div>
         <div class="publishNewAd" style="display:none;">
             <h2>Publish New Ad</h2>
             <hr />

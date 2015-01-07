@@ -1,0 +1,27 @@
+﻿<div class="registerForm" data-ng-controller="TownController">
+    <h2>User registration</h2>
+    <hr />
+    <span>Username:</span>
+    <input type="text" name="registerUsername" required="required" />
+    <span>Password:</span>
+    <input type="password" name="registerPassword" required="required" />
+    <span>Confirm password:</span>
+    <input type="password" name="registerPasswordAgain" required="required" />
+    <span>Name:</span>
+    <input type="text" name="registerName" required="required" />
+    <span>Email:</span>
+    <input type="email" name="registerEmail" required="required" />
+    <span>Phone:</span>
+    <input type="tel" name="registerPhone" required="required" />
+    <span>Town:</span>
+    <select>
+        <option data-ng-repeat="town in towns">{{town.name}}</option>
+    </select>
+
+    <div class="linkButton">
+        <a href="#/user/register">Register</a>
+    </div>
+    <div>
+        <a href="#/login">Login here</a>
+    </div>
+</div>
