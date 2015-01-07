@@ -7,7 +7,7 @@
     <script src="scripts/libs/jquery.noty.packaged.min.js"></script>
     <script src="scripts/libs/angular.js"></script>
 </head>
-<body data-ng-app="myApp" data-ng-controller="AdsController">
+<body data-ng-app="myApp">
     <header>
         <h2>Ads - Home</h2>
         <div id="userSettings" style="display: none;">
@@ -55,33 +55,7 @@
         </div>
     </nav>
     <main>
-        <div class="advertisement" ng-repeat="ad in ads">
-            <div class="title">
-                <h3>{{ad.title}}</h3>
-                <strong>{{ad.date | date:'d-MMM-yyyy'}}</strong>
-            </div>
-            <div class="content">
-               <div class="imageView">
-                   <img data-ng-src="{{ad.imageDataUrl}}"/>
-                   <img data-ng-if="!ad.imageDataUrl" data-ng-src="images/noImage.png"/>
-               </div>
-               <div class="text">
-                    {{ad.text}}
-               </div>
-               <div>
-                   <strong>Name: </strong> 
-                   <div class="name">{{ad.ownerName}}</div>
-               </div>
-               <div>
-                   <strong>Email: </strong> 
-                   <div class="email"><a href="mailto:{{ad.ownerEmail}}">{{ad.ownerEmail}}</a></div>
-               </div>
-                <div>
-                   <strong>Tel: </strong> 
-                   <div class="tel">{{ad.ownerPhone}}</div>
-               </div>
-            </div>
-        </div>
+        <div ng-view></div>
         <div class="loginForm" style="display:none;">
             <h2>Login</h2>
             <hr />
@@ -152,17 +126,6 @@
             <div class="linkButton">
                 <a href="#">Cancel</a>
             </div>
-        </div>
-        <div class="pager">
-            <div class="pageButton"><a href="" data-ng-click="firstPage()">First</a></div>
-            <div class="pageButton"><a href="" data-ng-click="previousPage()">Previous</a></div>
-
-            <div class="pageButton" data-ng-repeat="i in pagesList track by $index">
-                <a href="" data-ng-click="setStartPage($index+1)">{{$index + 1}}</a>
-            </div>
-
-            <div class="pageButton"><a href="" data-ng-click="nextPage()">Next</a></div>
-            <div class="pageButton"><a href="" data-ng-click="lastPage()">Last</a></div>
         </div>
         <div class="clearfix"></div>
     </main>
