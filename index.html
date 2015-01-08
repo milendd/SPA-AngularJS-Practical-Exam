@@ -30,30 +30,14 @@
             <h3>Navigation</h3>
             <hr />
             <ul>
-                <li class="selected"><a href="#">Home</a></li>
+                <li class="selected"><a href="#/">Home</a></li>
                 <li style="display: none;"><a href="#/user/ads">My Ads</a></li>
                 <li style="display: none;"><a href="#/user/ads">Publish New Ad</a></li>
                 <li style="display: none;"><a href="#/user/profile">Edit Profile</a></li>
             </ul>
         </div>
     </nav>
-    <nav class="rightNavigation">
-        <div class="categories" data-ng-controller="CategoryController">
-            <h3>Categories</h3>
-            <ul>
-                <li class="selected"><a href="" data-ng-click="getAllCategories()">All</a></li>
-                <li data-ng-repeat="category in categories track by $index"><a href="#" data-ng-click="getByCategoryId($index + 1)">{{category.name}}</a></li>
-            </ul>
-        </div>
-        <hr />
-        <div class="towns" data-ng-controller="TownController">
-            <h3>Towns</h3>
-            <ul>
-                <li class="selected"><a href="" data-ng-click="getAllTowns()">All</a></li>
-                <li data-ng-repeat="town in towns track by $index"><a href="#" data-ng-click="getByTownId($index + 1)">{{town.name}}</a></li>
-            </ul>
-        </div>
-    </nav>
+    
     <main>
         <div ng-view></div>
         <div class="publishNewAd" style="display:none;">
