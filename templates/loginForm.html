@@ -1,13 +1,13 @@
-﻿<div class="loginForm">
+﻿<div class="loginForm" data-ng-controller="LoginController">
     <h2>Login</h2>
     <hr />
     <span>Username:</span>
-    <input type="text" name="loginUsername" required="required" />
+    <input type="text" name="username" required="required" data-ng-model="user.username" />
     <span>Password:</span>
-    <input type="password" name="loginPassword" required="required" />
+    <input type="password" name="password" required="required" data-ng-model="user.password" />
 
     <div class="linkButton">
-        <a href="#/user/login">Login</a>
+        <a href="#/user/login" data-ng-click="login(user)">Login</a>
     </div>
     <div>
         <a href="#/register">Register here</a>

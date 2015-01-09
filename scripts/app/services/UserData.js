@@ -13,7 +13,20 @@
             })
         }
 
+        function loginUser(user) {
+            $http({
+                method: 'POST',
+                url: homeUrl + '/user/login',
+                data: user
+            }).success(function (data, status, headers, config) {
+                authentication.saveUser(angular.toJson(data));
+            }).error(function (data, status, headers, config) {
+                // TODO
+            })
+        }
+
         return {
-            registerUser: registerUser
+            registerUser: registerUser,
+            loginUser: loginUser
         }
     }])
