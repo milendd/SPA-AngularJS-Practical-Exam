@@ -1,25 +1,25 @@
-﻿<div class="registerForm" data-ng-controller="TownController">
+﻿<div class="registerForm" data-ng-controller="RegisterController">
     <h2>User registration</h2>
     <hr />
     <span>Username:</span>
-    <input type="text" name="registerUsername" required="required" />
+    <input type="text" name="username" required="required" data-ng-model="user.username" />
     <span>Password:</span>
-    <input type="password" name="registerPassword" required="required" />
+    <input type="password" name="password" required="required" data-ng-model="user.password" />
     <span>Confirm password:</span>
-    <input type="password" name="registerPasswordAgain" required="required" />
+    <input type="password" name="confirmPassword" required="required" data-ng-model="user.confirmPassword" />
     <span>Name:</span>
-    <input type="text" name="registerName" required="required" />
+    <input type="text" name="name" required="required" data-ng-model="user.name" />
     <span>Email:</span>
-    <input type="email" name="registerEmail" required="required" />
+    <input type="email" name="email" required="required" data-ng-model="user.email" />
     <span>Phone:</span>
-    <input type="tel" name="registerPhone" required="required" />
+    <input type="tel" name="phone" required="required" data-ng-model="user.phone" />
     <span>Town:</span>
-    <select>
-        <option data-ng-repeat="town in towns">{{town.name}}</option>
+    <select data-ng-controller="TownController" data-ng-model="user.townId">
+        <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
     </select>
 
     <div class="linkButton">
-        <a href="#/user/register">Register</a>
+        <a href="#/user/register" data-ng-click="register(user)">Register</a>
     </div>
     <div>
         <a href="#/login">Login here</a>
