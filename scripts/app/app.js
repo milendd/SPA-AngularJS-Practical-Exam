@@ -12,6 +12,9 @@ var app = angular.module('myApp', ['ngResource', 'ngRoute'])
             .when('/register', {
                 templateUrl: '../../templates/registerForm.html'
             })
+            .otherwise({
+                redirectTo: '/'
+            })
     })
     .constant('homeUrl', 'http://softuni-ads.azurewebsites.net/api')
     .constant('pageSize', 5);

@@ -25,8 +25,21 @@
             })
         }
 
+        function logoutUser(user) {
+            $http({
+                method: 'POST',
+                url: homeUrl + '/user/logout',
+                data: user
+            }).success(function (data, status, headers, config) {
+                authentication.clearHeaders();
+            }).error(function (data, status, headers, config) {
+                // TODO
+            })
+        }
+
         return {
             registerUser: registerUser,
-            loginUser: loginUser
+            loginUser: loginUser,
+            logoutUser: logoutUser
         }
     }])
