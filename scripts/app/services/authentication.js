@@ -17,6 +17,10 @@
         return headers;
     }
 
+    function isLoggedIn() {
+        return !!localStorage.user;
+    }
+
     function clearHeaders() {
         localStorage.removeItem('user');
     }
@@ -28,11 +32,18 @@
         }
     }
 
+    function showUserMenu() {
+        $('.userNavigation ul li').css('display', 'block');
+        $('.guestNavigation').css('display', 'none');
+    }
+
     return {
         saveUser: saveUser,
         getUser: getUser,
         getHeaders: getHeaders,
         clearHeaders: clearHeaders,
-        isAdmin: isAdmin
+        isAdmin: isAdmin,
+        isLoggedIn: isLoggedIn,
+        showUserMenu: showUserMenu
     }
 })
