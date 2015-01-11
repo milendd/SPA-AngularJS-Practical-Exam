@@ -8,6 +8,7 @@ app.controller('RegisterController', ['$scope', 'UserData', 'authentication',
         $scope.register = function (user) {
             UserData.registerUser(user);
             authentication.showUserMenu();
+            authentication.showHeaderMenu();
         }
 
     }]);

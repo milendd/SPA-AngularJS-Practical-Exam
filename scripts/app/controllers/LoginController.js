@@ -1,13 +1,14 @@
 ﻿"use strict";
 
-app.controller('LoginController', ['$scope', '$location', 'UserData', 'authentication',
-    function ($scope, $location, UserData, authentication) {
+app.controller('LoginController', ['$scope', 'UserData', 'authentication',
+    function ($scope, UserData, authentication) {
 
         $scope.user = {};
 
         $scope.login = function (user) {
             UserData.loginUser(user);
             authentication.showUserMenu();
+            authentication.showHeaderMenu();
         }
 
     }]);

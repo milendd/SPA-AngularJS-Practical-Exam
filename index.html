@@ -10,9 +10,9 @@
 <body data-ng-app="myApp">
     <header>
         <h2>Ads - Home</h2>
-        <div id="userSettings" style="display: none;">
-            <span>maria</span>
-            <a href="#">Logout</a>
+        <div id="userSettings" style="display: none;" data-ng-controller="LogoutController">
+            <span>{{user.name}}</span>
+            <a href="#/" data-ng-click="logout(user)">Logout</a>
         </div>
         <div class="clearfix"></div>
     </header>
@@ -54,6 +54,7 @@
     <script src="scripts/app/controllers/TownController.js"></script>
     <script src="scripts/app/controllers/RegisterController.js"></script>
     <script src="scripts/app/controllers/LoginController.js"></script>
+    <script src="scripts/app/controllers/LogoutController.js"></script>
     <script src="scripts/app/controllers/PublishNewAdController.js"></script>
     <script src="scripts/app/services/CategoriesResource.js"></script>
     <script src="scripts/app/services/TownsResource.js"></script>

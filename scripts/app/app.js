@@ -20,4 +20,4 @@ var app = angular.module('myApp', ['ngResource', 'ngRoute'])
             })
     })
     .constant('homeUrl', 'http://softuni-ads.azurewebsites.net/api')
-    .constant('pageSize', 5);
+    .constant('pageSize', 8);

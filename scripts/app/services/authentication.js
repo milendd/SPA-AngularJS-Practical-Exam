@@ -33,8 +33,22 @@
     }
 
     function showUserMenu() {
-        $('.userNavigation ul li').css('display', 'block');
-        $('.guestNavigation').css('display', 'none');
+        $('.userNavigation ul li').show();
+        $('.guestNavigation').hide();
+    }
+
+    function showGuestMenu() {
+        $('.userNavigation ul li').hide();
+        $('.userNavigation ul li:first').show();
+        $('.guestNavigation').show();
+    }
+
+    function showHeaderMenu() {
+        $('#userSettings').show();
+    }
+
+    function hideHeaderMenu() {
+        $('#userSettings').hide();
     }
 
     return {
@@ -44,6 +58,9 @@
         clearHeaders: clearHeaders,
         isAdmin: isAdmin,
         isLoggedIn: isLoggedIn,
-        showUserMenu: showUserMenu
+        showUserMenu: showUserMenu,
+        showGuestMenu: showGuestMenu,
+        showHeaderMenu: showHeaderMenu,
+        hideHeaderMenu: hideHeaderMenu
     }
 })
