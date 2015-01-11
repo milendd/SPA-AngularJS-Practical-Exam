@@ -12,6 +12,9 @@ var app = angular.module('myApp', ['ngResource', 'ngRoute'])
             .when('/register', {
                 templateUrl: '../../templates/registerForm.html'
             })
+            .when('/user/ads/publish', {
+                templateUrl: '../../templates/publishNewAd.html'
+            })
             .otherwise({
                 redirectTo: '/'
             })

@@ -32,43 +32,14 @@
             <ul>
                 <li class="selected"><a href="#/">Home</a></li>
                 <li style="display: none;"><a href="#/user/ads">My Ads</a></li>
-                <li style="display: none;"><a href="#/user/ads">Publish New Ad</a></li>
+                <li style="display: none;"><a href="#/user/ads/publish">Publish New Ad</a></li>
                 <li style="display: none;"><a href="#/user/profile">Edit Profile</a></li>
             </ul>
         </div>
     </nav>
     
     <main>
-        <div ng-view></div>
-        <div class="publishNewAd" style="display:none;">
-            <h2>Publish New Ad</h2>
-            <hr />
-            <!-- <div class="imageContainer"><img src="images/1.jpg" /></div> -->
-            <span>Title:</span>
-            <input type="text" name="publishTitle" required="required"/><br />
-            <span>Text:</span>
-            <input type="text" name="publishText" required="required"/><br />
-            <span>Image:</span>
-            <input type="text" name="publishImageSrc"/><br />
-            <!-- <input type="file" name="publishImage" value="Browse..." /> -->
-            <span>Category:</span>
-            <select>
-                <option>Cars</option>
-            </select>
-            <br />
-            <span>Town:</span>
-            <select>
-                <option>Plovdiv</option>
-            </select>
-            <br />
-
-            <div class="linkButton">
-                <a href="#/user/ads">Publish</a>
-            </div>
-            <div class="linkButton">
-                <a href="#">Cancel</a>
-            </div>
-        </div>
+        <div data-ng-view></div>
         <div class="clearfix"></div>
     </main>
     <footer>
@@ -83,6 +54,7 @@
     <script src="scripts/app/controllers/TownController.js"></script>
     <script src="scripts/app/controllers/RegisterController.js"></script>
     <script src="scripts/app/controllers/LoginController.js"></script>
+    <script src="scripts/app/controllers/PublishNewAdController.js"></script>
     <script src="scripts/app/services/CategoriesResource.js"></script>
     <script src="scripts/app/services/TownsResource.js"></script>
     <script src="scripts/app/services/AdsResource.js"></script>

@@ -1,0 +1,27 @@
+﻿<div class="publishNewAd" data-ng-controller="PublishNewAdController">
+    <h2>Publish New Ad</h2>
+    <hr />
+    <span>Title:</span>
+    <input type="text" name="publishTitle" required="required" data-ng-model="ad.title"/><br />
+    <span>Text:</span>
+    <input type="text" name="publishText" required="required" data-ng-model="ad.text"/><br />
+    <span>Image:</span>
+    <input type="file" name="publishImage" value="Browse..." /><br />
+    <span>Category:</span>
+    <select data-ng-controller="CategoryController" data-ng-model="ad.categoryId">
+        <option data-ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+    </select>
+    <br />
+    <span>Town:</span>
+    <select data-ng-controller="TownController" data-ng-model="ad.townId">
+        <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+    </select>
+    <br />
+
+    <div class="linkButton">
+        <a href="#/user/ads" data-ng-click="publish(ad)">Publish</a>
+    </div>
+    <div class="linkButton">
+        <a href="#">Cancel</a>
+    </div>
+</div>
