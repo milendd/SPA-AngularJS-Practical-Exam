@@ -3,10 +3,10 @@
 app.controller('LogoutController', ['$scope', 'UserData', 'authentication',
     function ($scope, UserData, authentication) {
 
-        var user = authentication.getUser();
+        $scope.user = authentication.getUser();
 
-        $scope.logout = function (user) {
-            UserData.logoutUser(user);
+        $scope.logout = function () {
+            UserData.logoutUser($scope.user);
             authentication.hideHeaderMenu();
             authentication.showGuestMenu();
         }

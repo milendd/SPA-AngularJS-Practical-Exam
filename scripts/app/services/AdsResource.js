@@ -2,7 +2,9 @@
 
 app.factory('AdsResource', ['$resource', 'homeUrl', 'pageSize', function ($resource, homeUrl, pageSize) {
     var adsResource = $resource(homeUrl + '/ads', null, {
-        'getAll': { method: 'GET', isArray: false }
+        'getAll': {
+            method: 'GET'
+        }
     });
 
     return {

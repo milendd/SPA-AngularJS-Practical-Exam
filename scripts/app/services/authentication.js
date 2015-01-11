@@ -5,7 +5,7 @@
     }
 
     function getUser() {
-        return angular.fromJson(localStorage.user);
+        return JSON.parse(localStorage.getItem('user'));
     }
 
     function getHeaders(argument) {

@@ -10,7 +10,8 @@ app.controller('PublishNewAdController', ['$http', '$scope', 'homeUrl', 'authent
             $http({
                 method: 'POST',
                 url: homeUrl + '/user/ads',
-                data: ad
+                data: ad,
+                headers: currentHeaders
             }).success(function (data, status, currentHeaders, config) {
                 console.log('success');
             }).error(function (data, status, currentHeaders, config) {
